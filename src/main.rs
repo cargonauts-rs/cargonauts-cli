@@ -119,6 +119,8 @@ routes! {
 ";
 
 const LIB: &'static str = "\
+#![feature(associated_consts)]
+
 #[macro_use] extern crate cargonauts;
 
 mod clients;
