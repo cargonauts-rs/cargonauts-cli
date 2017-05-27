@@ -1,10 +1,13 @@
 [package]
 authors = ["Without Boats <woboats@gmail.com>"]
-name = "cargonauts"
+name = "cargonauts-cli"
 description = "CLI for cargonauts web framework"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/cargonauts-rs/cargonauts"
 version = "0.2.0"
+
+[[bin]]
+name = "cargonauts"
 
 [dependencies]
 docopt = "0.7.0"
