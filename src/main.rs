@@ -38,7 +38,8 @@ fn main() {
     }
 }
 
-const CARGONAUTS_VERSION: &str = "{ git = \"https://github.com/withoutboats/cargonauts\" }";
+const CARGONAUTS_GIT: &str = "https://github.com/cargonauts-rs/cargonauts";
+const CARGONAUTS_BRANCH: &str = "0.2-release";
 
 const DIRS: &[(&str, Option<&str>)] = &[
         ("bin", None),
@@ -163,7 +164,8 @@ fn build_cargonauts_app(name: &str) -> io::Result<()> {
 
     // Rewrite Cargo.toml
     let mut file = fs::OpenOptions::new().append(true).open(path.join("Cargo.toml"))?;
-    write!(file, "cargonauts = {}", CARGONAUTS_VERSION)?;
+    write!(file, "\n[dependencies.cargonauts]\ngit = \"{}\"\nbranch = \"{}\"",
+           CARGONAUTS_GIT, CARGONAUTS_BRANCH)?;
 
     Ok(())
 }
