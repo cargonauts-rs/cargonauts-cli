@@ -16,7 +16,6 @@ pub fn generate_resource(name: &str) -> io::Result<()> {
 
     let mut lines = string.lines().collect::<Vec<_>>();
     let pos = get_pos(&lines);
-    println!("{}", pos);
     lines.insert(pos, &resource_obj);
     lines.insert(pos + 1, "    }");
 

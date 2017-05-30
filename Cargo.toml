@@ -4,7 +4,7 @@ description = "CLI for cargonauts web framework"
 license = "MIT OR Apache-2.0"
 name = "cargonauts-cli"
 repository = "https://github.com/cargonauts-rs/cargonauts"
-version = "0.2.1"
+version = "0.2.2"
 
 [[bin]]
 name = "cargonauts"
